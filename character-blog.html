@@ -72,7 +72,9 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+nav ul{
 
+}
 nav li{
     display: inline;
 }
@@ -262,7 +264,7 @@ article {
     text-align: right;
 }
 
-#blogdesc {
+.blogdesc {
     color: #d4d4d4;
 }
 
@@ -348,49 +350,11 @@ article .inner{
 .title a{
 
 }
-.blockquote {
+blockquote {
 
 }
-
-.video embed{
-    width: 500px;
-}
-
-    .html_photoset {
-
-    }
     
-.link .title a{
-
-    }
-    
-.chat ul{
-
-    }
-.chat li{
-
-    }
-.chat .even {
-
-    }
-    
-.answer-inner {
-  
-    }
-    
-.question {
-
-    }
-    
-.ask-port {
-
-    }
-    
-.user-ask {
-
-    }
-    
-.photo img{
+    .photo img{
         width: 500px;
 
     }
@@ -588,8 +552,9 @@ border-radius: 0.2em;
         width: 130px;
     }
     
-    #blogdesc {
+    .blogdesc {
         font-size: 12px;
+        color: #fff;
     }
     
     #SocialSection {
@@ -630,11 +595,7 @@ border-radius: 0.2em;
     #footer {
         margin-left: 800px;
     }
-    
-    #FootText {
-        font-size: 10px;
-        
-    }
+
 }
 
    
@@ -803,7 +764,7 @@ border-radius: 0.2em;
     <div id="SideCont">
     <div id="DescArea">
         {block:Description}
-        <p id="blogdesc">{Description}</p>
+        <p class="blogdesc">{Description}</p>
         {/block:Description}
     </div>
     <div class="ButtonArea">
@@ -820,8 +781,9 @@ border-radius: 0.2em;
     </div>
         {/block:PreviousPage}
         {/block:Pagination}
+        <p class="blogdesc">&copy; 2013-2017 Alt-Tabard</p>
     <div id="footer">
-    <p id="FootText">&copy; 2013-2017 Alt-Tabard</p>
+    
     </div>
     </div> 
 </div>    
