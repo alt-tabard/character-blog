@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Code by alt-tabard.tumblr.com -->
+<meta name="image:Favicon" content="" />
+<meta name="color:Background" content="#79a4aa" />
+<meta name="image:Background" content="/" />
+<meta name="color:Links" content="#c63b4b" />
+<meta name="color:Text" content="#494949" />
+<meta name="font:Body" content="Arial, Helvetica, sans-serif" />
+    
+<meta name="color:NavBar" content="#4784ba" />
+<meta name="color:NavBar Links" content="fff" />
+<meta name="color:NavBar Bord" content="" />
+    
+<meta name="image:Portrait" content="/" />
+<meta name="image:SocialIcons" content="/" />
+<meta name="image:Logo" content="/" />
+<meta name="text:description" content="" />
+
+<meta name="color:SideBar" content="" />
+    
+<meta name="color:Buttons" content="#4784ba" />
+<meta name="color:ButtonsBord" content="#4784ba" />
+<meta name="color:ButtonsText" content="" />
+<meta name="color:ButtonsHover" content="" />
+<meta name="text:Link1" content="/">
+<meta name="text:Link1 url" content="/">
+<meta name="text:Link2" content="">
+<meta name="text:Link2 url" content="">
+<meta name="text:Link3" content="Tabletop Games" />
+<meta name="text:Link3 url" content="/about" />
+<meta name="text:Link4" content="Tabletop Games" />
+<meta name="text:Link4 url" content="/about" />
+<meta name="text:TwitterHandle" content="">
+<meta name="text:TwitchHandle" content="">
+
+<meta name="description" content="{MetaDescription}" /> 
+    
+{block:Description} <meta name="description" content="{MetaDescription}" /> {/block:Description}
+<title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+
+<link rel="shortcut icon" href="{Favicon}"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="alternate" type="application/rss+xml" title="{Title} RSS" href="{RSS}"/>
+<link rel="stylesheet" href="http://static.tumblr.com/hznqxps/ivOmgjf8v/normalize.css" />
+<link href="https://fonts.googleapis.com/css?family=Carter+One|Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+<style>
+/*Basic Styles*/
+body {
+    background-image: url({image:Background});
+    background-size: cover;
+    background-attachment: fixed;
+}
+    
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
+a {
+    color: {color:Links};
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Carter One', cursive;
+    margin-top: 2px;
+
+}
+
+
+nav li{
+    display: inline;
+}
+
+iframe, img, embed, object, video {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+    width: auto;
+}
+
+article {
+    width: 41.5%;
+    margin: 0 10px;
+}
+
+
+/* RIGHT CONTENT AREA =========================================================================== }*/
+
+#PortraitImg {
+    float: left;
+    width: 330px;
+    height: auto;
+    position: fixed;
+    bottom: 290px;
+    margin-left: 10px;
+    z-index: -2;
+}
+
+
+#SelfPort {
+        height: auto;
+
+}
+
+/* MAIN CONTENT AREA =========================================================================== }*/
+
+#ContentCenter {
+    float: left;
+    margin-left: 370px;
+    width: 550px;
+    height: auto;
+    position: absolute;
+    margin-top: 50px;
+
+}
+
+#ContentMain {
+    width: 500px;
+    color: {color:Text};
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    z-index: 3;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#LogoArea {
+    float: left;
+    position: fixed;
+    bottom: 300px;
+    margin-left: 950px;
+}
+
+#logo {
+    width: 250px;
+}
+
+
+#footer {
+    margin-top: 50px;
+    color: {color:Footer};
+    position: fixed;
+    bottom: 2px;
+    margin-left: 950px;
+}
+
+
+/* BOTTOM BAR AREA =========================================================================== }*/
+
+#SideBar {
+    height: 300px; 
+    border-top: 1px #204b72 solid;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: {color:SideBar};
+    z-index: -1;
+}
+    
+/* NAVIGATION AREA =========================================================================== */
+#NavBar {
+    width: 100%;
+    height: 50px;
+    background-color: {color:NavBar};
+    border-top: {color:NavBar Bord} 1px solid;
+    border-bottom: {color:NavBar Bord} 1px solid;
+}
+
+#SocialSection {
+    width: 330px;
+    float: left;
+    margin-left: 10px;
+    text-align: right;
+}
+
+.SocialLinks li{
+    display: inline-block;
+
+}
+
+.SocialLinks li a{
+    float: left;
+    margin-right: 5px;
+    background-image: url('{image:SocialIcons}');
+    text-indent: 9999px;
+    overflow: hidden;
+    width: 25px;
+    height: 25px;
+}
+
+#twitch {
+    background-position: 0px 0px;
+}
+
+#twitter {
+    background-position: -25px -0px;
+}
+
+#twitch:hover{
+    background-position: -0px -25px;
+}
+
+#twitter:hover {
+    background-position: -25px -25px;
+}
+
+#NavSection {
+    float: left;
+    margin-left: 560px;
+}
+
+#MainNav {
+    color: {color:NavBar Text};
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+#MainNav a{
+    color: {color:NavBar Links};
+    text-decoration: none;
+
+}
+
+#MainNav ul {
+    margin: 0px;
+}
+
+#MainNav li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+}
+
+#MainNav li a:hover{
+    color: #fff;
+}
+
+
+/* SIDEBAR AREA =========================================================================== */
+#SideCont {
+    width: 100%;
+    height: auto;
+    clear: both;
+}
+
+#DescArea {
+    float: left;
+    width: 285px;
+    margin-left: 50px;
+    text-align: right;
+}
+
+#blogdesc {
+    color: #d4d4d4;
+}
+
+.ButtonArea {
+    float: left;
+    width: 400px;
+    margin-left: 610px;
+    margin-top: 20px;
+}
+
+    
+.button{
+    width: 160px;
+    height: 22px;
+    background: #fff;
+    margin: 0px 0px 10px 10px;
+    padding-top: 13px;
+    padding-bottom: 5px;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid {color:ButtonsBord};
+    background: {color:Buttons};
+    text-decoration: none;
+    color: {color:ButtonsText};
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    border-radius: 1px;
+}
+
+.button:hover{
+    background: {color:ButtonsHover};
+}
+
+.pagination{
+    width: 60px;
+    height: 12px;
+    background: #fff;
+    margin: 20px 0px 10px 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid {color:ButtonsBord};
+    background: {color:Buttons};
+    text-decoration: none;
+    color: {color:ButtonsText};
+    font-size: 12px;
+}
+
+.pagination:hover{
+    background: {color:ButtonsHover};
+}
+    
+    
+
+
+/* CONTENT */
+
+    
+#ContentMain article{
+    width: 500px;
+    height: auto;
+    color: {color:Text};
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 3;
+    display: block;
+    margin-bottom: 20px;
+}
+article .inner{
+    display: inline-block;
+    width: 500px;
+
+}
+/*Post Styles*/
+.title a{
+
+}
+.blockquote {
+
+}
+
+.video embed{
+    width: 500px;
+}
+
+    .html_photoset {
+
+    }
+    
+.link .title a{
+
+    }
+    
+.chat ul{
+
+    }
+.chat li{
+
+    }
+.chat .even {
+
+    }
+    
+.answer-inner {
+  
+    }
+    
+.question {
+
+    }
+    
+.ask-port {
+
+    }
+    
+.user-ask {
+
+    }
+    
+.photo img{
+        width: 500px;
+
+    }
+    
+.user{
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        float: left;
+        margin-right: 3%;
+    }
+
+.MetaArea {
+    width: 500px;
+    height: auto;
+    border-top: #ccc 1px solid;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+    
+.metadata {
+    color: #ccc;
+    font-size: 12px;
+    float: left;
+    padding: 0px;
+}
+.metadata ul {
+    list-style: none;
+    float: left;
+    margin-bottom: 20px;
+}
+.metadata ul, #notes ol {
+}
+
+.metadata li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.metadata a {
+    color: #ccc;
+}
+
+.metadata a:hover {
+    color: #aaa;
+}
+
+.metadatab a{
+    color: #ccc;
+    font-size: 12px;
+    float: left;
+}
+
+.tags {
+    width: 500px;
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 12px;
+    padding: 0px;
+    height: auto;
+    clear: left;
+}
+
+.tags ul{
+    display: block;
+    float: left;
+}
+
+.tags a{
+        color: #ccc;
+
+}
+.tags li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.tags a:hover{
+        color: #aaa;
+}
+.tags li:hover {
+    color: #aaa;
+}
+
+.index {
+}
+.index li, .tags li {
+
+}
+
+.shares {
+    clear: both;
+    float: right;
+    margin-top: -30px;
+}
+
+.shares ul{
+}
+
+.shares li{
+    display: inline-block;
+    margin-left: 10px;
+    list-style: none;
+}
+
+.notes {
+    color: #aaa;
+    font-size: 10px;
+    margin-left: 0px;
+}
+
+.note {
+    border-bottom: 1px #aaa solid;
+    padding: 5px 0px;
+    margin-left: 0px;
+}
+
+/*Common styles*/
+blockquote, footer {
+border: 1px solid #aaa;
+padding: 10px;
+margin: 1px;
+}
+#content article, .item {
+border-radius: 0.2em;
+}
+
+
+
+/* MEDIA QUERIES AREA =========================================================================== */
+
+@media only screen and (max-width: 1350px) {
+    
+    #MainNav{
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    
+    #DescArea {
+        width: 200px;
+    }
+    
+    #SocialSection {
+        width: 250px;
+    }
+    
+    #SelfPort {
+        width: 280px;
+    }
+    
+    #ContentCenter {
+        margin-left: 300px;
+    }
+    
+    #LogoArea {
+        margin-left: 870px;
+    }
+    
+    .ButtonArea {
+    width: 270px;
+}
+    
+    .button{
+        width: 100px;
+        height: 10px;
+        font-size: 12px;
+        padding: 7px;
+    }
+    
+    .pagination {
+        font-size: 11px;
+        height: 10px;
+        width: 50px;
+        margin: 10px 0px 0px 10px;
+        padding: 2px;
+    }
+    
+    #footer {
+        margin-left: 870px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    
+    #MainNav{
+        font-size: 12px;
+        margin-left: -15px;
+    }
+    
+    #DescArea {
+        width: 130px;
+    }
+    
+    #blogdesc {
+        font-size: 12px;
+    }
+    
+    #SocialSection {
+        width: 170px;
+    }
+    
+    #SelfPort {
+        width: 180px;
+    }
+    
+    #ContentCenter {
+        margin-left: 200px;
+    }
+    
+    #LogoArea {
+        margin-left: 770px;
+    }
+    
+    .ButtonArea {
+    width: 170px;
+}
+    
+    .button{
+        width: 100px;
+        height: 10px;
+        font-size: 12px;
+        padding: 7px;
+    }
+    
+    .pagination {
+        font-size: 11px;
+        height: 10px;
+        width: 50px;
+        margin: 10px 0px 0px 10px;
+        padding: 2px;
+    }
+    
+    #footer {
+        margin-left: 800px;
+    }
+    
+    #FootText {
+        font-size: 10px;
+        
+    }
+}
+
+   
+</style>
+
+</head>
+
+<body>
+<div class="ContentArea">
+<div id="MainBG">    
+    
+    <div id="PortraitImg">
+    <img src="{image:Portrait}" id="SelfPort">
+    </div>
+    <div id="ContentCenter">
+     
+        
+     {block:Posts}
+    <article id="ContentMain">
+        {block:Text}
+        <div class="text inner">
+            {block:Title}<h1 class="title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+            {Body}
+        </div>
+        {/block:Text}
+
+        {block:Photo}
+        <div class="photo inner">
+            {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />{LinkCloseTag}
+            {block:Caption}{Caption}{/block:Caption}
+            </div>
+        {/block:Photo}
+
+        {block:Photoset}
+        <div class="photoset inner">
+            {Photoset-500}
+            {block:Caption}{Caption}{/block:Caption}
+            </div>
+        {/block:Photoset}
+
+        {block:Quote}
+        <div class="quote inner">
+            <blockquote>{Quote}</blockquote>
+            {block:Source}<cite> {Source} </cite>{/block:Source}
+            </div>
+        {/block:Quote}
+
+        {block:Link}
+        <div class="link inner">
+            <h1 class="title"><a href="{URL}">{Name}</a></h1>
+            {block:Description}{Description}{/block:Description}
+            </div>
+        {/block:Link}
+
+        {block:Chat}
+        <div class="chat inner">
+            <ul>
+                {block:Lines}<li class="{Alt}"><p>{block:Label}<strong>{Label}</strong>{/block:Label} {Line} </p></li>{/block:Lines}
+            </ul>
+            </div>
+        {/block:Chat}
+
+        {block:Audio}
+        <div class="audio inner">
+            {block:TrackName}<h1 class="title"><a href="{Permalink}">{TrackName}</a></h1>{/block:TrackName}
+            {block:AlbumArt}<img src="{AlbumArtURL}" width="500" height="500"/>{/block:AlbumArt}
+            {AudioPlayerBlack}
+            {block:Caption}{Caption}{/block:Caption}
+            </div>
+        {/block:Audio}
+
+        {block:Video}
+        <div class="video inner">
+            {Video-700}
+            {block:Caption}{Caption}{/block:Caption}
+            </div>
+        {/block:Video}
+
+        {block:Answer}
+        <div class="answer inner">
+            <h1 class="title">{Question}</h1>
+            <div class="user"><img src="{AskerPortraitURL-96}"/><p>{Asker}</p>
+                </div>
+            </div>
+            {Answer}
+        {/block:Answer}    
+        
+                {block:Date}
+        <div class="MetaArea">
+            <ul class="metadata">
+            {block:ContentSource}
+                <li class="metadatab"><a href="{SourceURL}">{lang:Source}:{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
+                {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}"height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}</a></li>
+                {/block:ContentSource}
+                <li class="metadatab"><a href="{Permalink}"> <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{DayOfMonth} {Month} {Year}</time> </a></li>
+
+                {block:NoteCount}<li class="metadata"><a class="notecount" href="{Permalink}#notes">{NoteCountWithLabel}</a></li>{/block:NoteCount}
+                </ul>
+            <ul class="shares">
+              <li>{ReblogButton color="grey" size="15"}</li>
+              <li>{LikeButton color="grey" size="15"}</li>
+          
+            </ul>
+
+{block:HasTags}
+          
+            <ul class="tags">
+                {block:Tags}<li><a href="{TagURL}">#{Tag}</a> </li>{/block:Tags}
+            </ul>
+            {/block:HasTags}
+        
+            
+            {block:PermalinkPage}
+            <div id="notearea">
+            {block:PostNotes}
+            <div id="notes">
+                {PostNotes}
+            </div>
+            {/block:PostNotes} 
+            </div>
+            {/block:PermalinkPage} 
+        </div>
+        {/block:Date}
+     </article>
+             
+
+    {/block:Posts}
+
+        
+        
+        
+    
+    </div>
+    
+    <div id="LogoArea">
+       <a href="{BlogURL}"> <img id="logo" src="{image:Logo}"></a>
+    </div>
+    
+<div id="SideBar">
+    
+   
+    <div id="NavBar">
+    <div id="SocialSection">
+        <ul class="SocialLinks">
+        <li><a id="twitch" href="{text:TwitchHandle}" rel="me" target="_blank">Twitch</a></li>
+            <li><a id="twitter" href="{text:TwitterHandle}" rel="me" target="_blank">Twitter</a></li>
+        </ul>
+    </div>    
+        
+        
+    <div id="NavSection">    
+    <ul id="MainNav">
+        <li><a href="{BlogURL}">HOME</a></li>
+        <li><a href="/archive">Archives</a></li>
+        {block:AskEnabled}
+        <li><a href="/ask">{AskLabel}</a></li>
+        {/block:AskEnabled}
+        {block:SubmissionsEnabled}
+        <li><a href="{/submit}">{SubmitLabel}</a></li>
+        {/block:SubmissionsEnabled}
+        
+    </ul> 
+    </div><!-- MAIN NAVIGATION -->
+    </div>
+    
+    <div id="SideCont">
+    <div id="DescArea">
+        {block:Description}
+        <p id="blogdesc">{Description}</p>
+        {/block:Description}
+    </div>
+    <div class="ButtonArea">
+        <a href="{text:Link1 url}" class="button">{text:Link1}</a>
+        <a href="{text:Link2 url}" class="button">{text:Link2}</a>
+        <a href="{text:Link3 url}" class="button">{text:Link3}</a>
+        <a href="{text:Link4 url}" class="button">{text:Link4}</a>
+        {block:Pagination}
+        {block:NextPage}
+        <a href="{NextPage}" class="pagination">NEXT</a>
+        {/block:NextPage}
+        {block:PreviousPage}
+        <a href="{PreviousPage}" class="pagination">LAST</a>
+    </div>
+        {/block:PreviousPage}
+        {/block:Pagination}
+    <div id="footer">
+    <p id="FootText">&copy; 2013-2017 Alt-Tabard</p>
+    </div>
+    </div> 
+</div>    
+    
+</div>
+    
+    
+    </div>
+    </body>
+</html>
